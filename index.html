@@ -4,13 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>vue-pwa</title>
-    <link rel="manifest" href="/static/manifest.json" />
+    <link rel="manifest" href="./static/manifest.json" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
     <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">    
     <script type="text/javascript">
         if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js')
-        }   	
+          navigator.serviceWorker.register('./service-worker.js')
+        }else{
+          alert('浏览器暂不支持 Service Worker');
+        }  	
     </script>
   </head>
   <body>

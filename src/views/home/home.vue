@@ -13,7 +13,7 @@
 	 		<md-toolbar class="md-large">
 	      <div class="left-header-tool">
           <md-avatar class="md-large">
-            <img src="../assets/logo.png" alt="People">
+            <img src="../../assets/logo.png" alt="People">
           </md-avatar>
 	      </div>
 	    </md-toolbar>
@@ -54,15 +54,20 @@
 		  <md-bottom-bar-item md-icon="perm_contact_calendar">英雄</md-bottom-bar-item>
 		  <md-bottom-bar-item md-icon="ondemand_video" md-active>视频</md-bottom-bar-item>
 		  <md-bottom-bar-item md-icon="face">我</md-bottom-bar-item>
-		</md-bottom-bar> 		
+		</md-bottom-bar>
+    <share v-model="shareShow"></share>
+    <md-button @click="shareShow = true" class="md-fab share-btn">
+      <md-icon>share</md-icon>
+    </md-button>
   </div>
 </template>
 
 <script>
+import Share from '../../components/Share'
 export default {
   data () {
     return {
-      nowRouter: ''
+      shareShow: false
     }
   },
   methods: {
@@ -72,10 +77,10 @@ export default {
     setRouterAddress (address) {
       this.toggleLeftSlidenav()
       this.$router.push(address)
-    },
-    actionNowAddress () {
-      this.$router.push(this.nowRouter)
     }
+  },
+  components: {
+    Share
   }
 }
 </script>
@@ -92,6 +97,12 @@ export default {
   	.bottom-bar{
   		position: fixed;
   		bottom: 0;
-  	}	
+  	}
+    .share-btn{
+      position: fixed;
+      z-index: 2;
+      bottom: 15%;
+      right: 2%;
+    }	
   }
 </style>
