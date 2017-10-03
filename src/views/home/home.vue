@@ -4,7 +4,7 @@
  			<md-button @click="toggleLeftSlidenav" class="md-icon-button toolbar-opt">
  				<md-icon>menu</md-icon>
  			</md-button>
-			<h2 class="md-title title" style="">英雄联盟</h2> 
+			<h2 class="md-title title" style="">LOLER</h2> 
 			<md-button class="md-icon-button toolbar-opt">
 			  <md-icon>more_vert</md-icon>
 			</md-button>						
@@ -49,11 +49,12 @@
         </md-list-item>
       </md-list>
  		</md-sidenav>
+    <router-view></router-view>
 		<md-bottom-bar class="bottom-bar" md-shift>
 		  <md-bottom-bar-item md-icon="bubble_chart">资讯</md-bottom-bar-item>
 		  <md-bottom-bar-item md-icon="perm_contact_calendar">英雄</md-bottom-bar-item>
 		  <md-bottom-bar-item md-icon="ondemand_video" md-active>视频</md-bottom-bar-item>
-		  <md-bottom-bar-item md-icon="face">我</md-bottom-bar-item>
+		  <md-bottom-bar-item @click.native="routerTag('/home/user')" md-icon="face">我</md-bottom-bar-item>
 		</md-bottom-bar>
     <share v-model="shareShow"></share>
     <md-button @click="shareShow = true" class="md-fab share-btn">
@@ -77,6 +78,9 @@ export default {
     setRouterAddress (address) {
       this.toggleLeftSlidenav()
       this.$router.push(address)
+    },
+    routerTag (target) {
+      this.$router.push(target)
     }
   },
   components: {
