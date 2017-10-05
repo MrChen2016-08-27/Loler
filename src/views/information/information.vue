@@ -32,7 +32,7 @@ export default {
 <style lang='less' scoped >
 #infomation{
   .column{
-    margin-bottom: 15px;
+    margin: 10px 0px;
   }
 
 }

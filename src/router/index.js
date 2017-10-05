@@ -18,6 +18,10 @@ export default new Router({
       component: Home,
       children: [
         {
+          path: '/',
+          redirect: 'information'
+        },
+        {
           path: 'user',
           name: 'user',
           component: User

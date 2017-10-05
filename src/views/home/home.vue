@@ -1,19 +1,19 @@
 <template>
   <div id="home" >
- 		<md-toolbar>
+ 		<md-whiteframe md-tag="md-toolbar" md-elevation="2" class="md-transparent top-header">
  			<md-button @click="toggleLeftSlidenav" class="md-icon-button toolbar-opt">
  				<md-icon>menu</md-icon>
  			</md-button>
-			<h2 class="md-title title" style="">LOLER</h2> 
+			<h2 class="md-title title">LOLer</h2> 
 			<md-button class="md-icon-button toolbar-opt">
 			  <md-icon>more_vert</md-icon>
 			</md-button>						
- 		</md-toolbar>
- 		<md-sidenav md-swipeable class="md-left" ref="leftSidenav" >
+ 		</md-whiteframe>
+ 		<md-sidenav class="md-left md-fixed" ref="leftSidenav" >
 	 		<md-toolbar class="md-large">
 	      <div class="left-header-tool">
           <md-avatar class="md-large">
-            <img src="../../assets/logo.png" alt="People">
+            <img src="../../assets/avatar.jpg" alt="People">
           </md-avatar>
 	      </div>
 	    </md-toolbar>
@@ -91,10 +91,30 @@ export default {
 
 <style lang='less' scoped >
   #home{
-    padding-bottom: 60px;
+    @header-height: 60px;
+    position: relative;
+    padding-top: @header-height;
   	.toolbar-opt{
   		flex: 1;
   	}
+    .top-header{
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 99;
+      &:before{
+        width: 100%;
+        height: 40px;
+        top: 0;
+        left: 0;
+        content: '';
+        position: absolute;
+        height: @header-height;
+        opacity: 0.7;
+        background-color: #ffffff;
+        z-index: -1;
+      }
+    }
   	.title{
   		flex: 8;
   		text-align: left;
@@ -102,7 +122,7 @@ export default {
   	.bottom-bar{
   		position: fixed;
   		bottom: 0;
-      z-index: 999;
+      z-index: 99;
   	}
     .share-btn{
       position: fixed;

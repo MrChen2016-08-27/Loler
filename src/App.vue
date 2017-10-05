@@ -13,6 +13,11 @@ export default {
 <style>
 *{
 	box-sizing: border-box;
+  text-decoration: none;
+}
+.md-sidenav {
+  position: fixed  !important;
+  z-index: 9999;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
