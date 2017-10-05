@@ -51,7 +51,7 @@
  		</md-sidenav>
     <router-view></router-view>
 		<md-bottom-bar class="bottom-bar" md-shift>
-		  <md-bottom-bar-item md-icon="bubble_chart">资讯</md-bottom-bar-item>
+		  <md-bottom-bar-item @click.native="routerTag('/home/information')" md-icon="bubble_chart">资讯</md-bottom-bar-item>
 		  <md-bottom-bar-item md-icon="perm_contact_calendar">英雄</md-bottom-bar-item>
 		  <md-bottom-bar-item md-icon="ondemand_video" md-active>视频</md-bottom-bar-item>
 		  <md-bottom-bar-item @click.native="routerTag('/home/user')" md-icon="face">我</md-bottom-bar-item>
@@ -91,6 +91,7 @@ export default {
 
 <style lang='less' scoped >
   #home{
+    padding-bottom: 60px;
   	.toolbar-opt{
   		flex: 1;
   	}
@@ -101,6 +102,7 @@ export default {
   	.bottom-bar{
   		position: fixed;
   		bottom: 0;
+      z-index: 999;
   	}
     .share-btn{
       position: fixed;
