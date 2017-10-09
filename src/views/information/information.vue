@@ -1,23 +1,36 @@
 <template>
 	<div id="infomation">
-    <md-card class="column">
-      <md-card-media>
-        <img src="../../assets/lol1.jpg" alt="People">
-      </md-card-media>
-      <md-card-header>
-        <div class="md-title">每日一笑</div>
-        <div class="md-subhead">会玩的德莱文是斧头跟着人走，不会玩的是人跟着斧头走，而我就厉害了。。</div>
-      </md-card-header>
-    </md-card>		
-    <md-card class="column">
-		  <md-card-media>
-		    <img src="../../assets/lol2.jpg" alt="People">
-		  </md-card-media>
-		  <md-card-header>
-		    <div class="md-title">下路黑科技，大嘴和璐璐</div>
-		    <div class="md-subhead">在本次版本中的大嘴和璐璐组合，在香炉成型后，表现出爆炸的输出以及强韧的生命力</div>
-		  </md-card-header>
-		</md-card>
+    <md-list class="custom-list md-triple-line">
+      <md-list-item>
+        <md-avatar>
+          <img src="http://puui.qpic.cn/qqvideo_ori/0/d0557nalxgn_228_128/0" alt="People">
+        </md-avatar>
+
+        <div class="md-list-text-container">
+          <span>即时反馈系统全区上线公告</span>
+          <span>英雄联盟运营团队</span>
+          <p>为了进一步维护召唤师峡谷的游戏环境，我们于10月3日起开始在全大区上线即时反馈系统</p>
+        </div>
+        <md-button class="md-icon-button md-list-action">
+          <md-icon class="md-primary">keyboard_arrow_right</md-icon>
+        </md-button>
+        <md-divider class="md-inset"></md-divider>
+      </md-list-item>
+      <md-list-item>
+        <md-avatar>
+          <img src="http://ossweb-img.qq.com/upload/webplat/info/lol/20170929/33168445496013.jpg" alt="People">
+        </md-avatar> 
+        <div class="md-list-text-container">
+          <span>中秋国庆双节回馈公告</span>
+          <span>英雄联盟运营团队</span>
+          <p>在各位召唤师欢庆中秋国庆双节的同时，我们也为各位准备了一波双节限时回馈活动</p>
+        </div>
+        <md-button class="md-icon-button md-list-action">
+          <md-icon class="md-primary">keyboard_arrow_right</md-icon>
+        </md-button>
+        <md-divider class="md-inset"></md-divider>
+      </md-list-item>
+    </md-list>
 	</div>
 </template>
 

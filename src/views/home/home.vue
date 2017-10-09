@@ -93,7 +93,7 @@ export default {
   #home{
     @header-height: 60px;
     position: relative;
-    padding-top: @header-height;
+    padding: @header-height 0;
   	.toolbar-opt{
   		flex: 1;
   	}
