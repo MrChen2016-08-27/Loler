@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/home/home'
+import Heros from '@/views/hero/heros'
 import User from '@/views/user/user'
 import Information from '@/views/information/information'
 
@@ -30,6 +31,11 @@ export default new Router({
           path: 'information',
           name: 'information',
           component: Information
+        },
+        {
+          path: 'heros',
+          name: 'heros',
+          component: Heros
         }
       ]
     }

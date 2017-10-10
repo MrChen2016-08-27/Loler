@@ -51,10 +51,10 @@
  		</md-sidenav>
     <router-view></router-view>
 		<md-bottom-bar class="bottom-bar" md-shift>
-		  <md-bottom-bar-item @click.native="routerTag('/home/information')" md-icon="bubble_chart">资讯</md-bottom-bar-item>
-		  <md-bottom-bar-item md-icon="perm_contact_calendar">英雄</md-bottom-bar-item>
-		  <md-bottom-bar-item md-icon="ondemand_video" md-active>视频</md-bottom-bar-item>
-		  <md-bottom-bar-item @click.native="routerTag('/home/user')" md-icon="face">我</md-bottom-bar-item>
+		  <md-bottom-bar-item md-active @click.native="replaceTag('/home/information')" md-icon="bubble_chart">资讯</md-bottom-bar-item>
+		  <md-bottom-bar-item @click.native="replaceTag('/home/heros')" md-icon="perm_contact_calendar">英雄</md-bottom-bar-item>
+		  <md-bottom-bar-item @click.native="replaceTag('/')" md-icon="ondemand_video">视频</md-bottom-bar-item>
+		  <md-bottom-bar-item @click.native="replaceTag('/home/user')" md-icon="face">我</md-bottom-bar-item>
 		</md-bottom-bar>
     <share v-model="shareShow"></share>
     <md-button @click="shareShow = true" class="md-fab share-btn">
@@ -79,8 +79,8 @@ export default {
       this.toggleLeftSlidenav()
       this.$router.push(address)
     },
-    routerTag (target) {
-      this.$router.push(target)
+    replaceTag (target) {
+      this.$router.replace(target)
     }
   },
   components: {
