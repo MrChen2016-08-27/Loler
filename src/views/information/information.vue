@@ -2,7 +2,7 @@
 <div id="infomation">
   <md-boards :md-auto="true" :md-infinite="true" :md-duration="5000" :md-swipeable="true">
     <md-board v-for="(item, index) in carousels" :key="index" >
-      <img @click="openHref(item.href)"  :src="item.src" />
+      <img @click="targetHref(item.href)"  :src="item.src" />
     </md-board>
   </md-boards>  
   <md-list class="custom-list md-triple-line">
@@ -51,8 +51,8 @@ export default {
     }
   },
   methods: {
-    openHref (href) {
-      window.open(href)
+    targetHref (href) {
+      window.location.href = href
     }
   }
 }

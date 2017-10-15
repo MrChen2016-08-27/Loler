@@ -5,6 +5,7 @@ import App from './App'
 import router from './router'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
+import FastClick from 'fastclick'
 Vue.config.productionTip = false
 Vue.use(VueMaterial)
 Vue.material.registerTheme('default', {
@@ -15,5 +16,8 @@ new Vue({
   el: '#app',
   router,
   template: '<App/>',
-  components: { App }
+  components: { App },
+  mounted () {
+    FastClick.attach(document.body)
+  }
 })

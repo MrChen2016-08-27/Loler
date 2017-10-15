@@ -4,6 +4,7 @@ import Home from '@/views/home/home'
 import Heros from '@/views/hero/heros'
 import User from '@/views/user/user'
 import Information from '@/views/information/information'
+import Videos from '@/views/videos/videos'
 
 Vue.use(Router)
 
@@ -31,6 +32,11 @@ export default new Router({
           path: 'information',
           name: 'information',
           component: Information
+        },
+        {
+          path: 'videos',
+          name: 'videos',
+          component: Videos
         },
         {
           path: 'heros',
