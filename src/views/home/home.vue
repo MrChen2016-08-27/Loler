@@ -4,10 +4,10 @@
  			<md-button @click="toggleLeftSlidenav" class="md-icon-button toolbar-opt">
  				<md-icon>menu</md-icon>
  			</md-button>
-			<h2 class="md-title title">LOLer</h2> 
+			<h2 class="md-title title">LOLer</h2>
 			<md-button class="md-icon-button toolbar-opt">
 			  <md-icon>more_vert</md-icon>
-			</md-button>						
+			</md-button>
  		</md-whiteframe>
  		<md-sidenav class="md-left md-fixed" ref="leftSidenav" >
 	 		<md-toolbar class="md-large">
@@ -27,7 +27,7 @@
                   <md-list-item class="md-inset">装备搭配指南</md-list-item>
                   <md-list-item class="md-inset">上分必备技巧</md-list-item>
               </md-list>
-            </md-list-expand>    
+            </md-list-expand>
         </md-list-item>
         <md-list-item>
             <md-icon>videogame_asset</md-icon>
@@ -38,14 +38,14 @@
                   <md-list-item class="md-inset">游戏记录</md-list-item>
               </md-list>
             </md-list-expand>
-        </md-list-item>        
+        </md-list-item>
         <md-list-item @click="setRouterAddress('/')">
             <md-icon>record_voice_over</md-icon>
             <span>我的关注</span>
         </md-list-item>
         <md-list-item>
           <md-icon>favorite</md-icon>
-          <span>我的收藏</span>          
+          <span>我的收藏</span>
         </md-list-item>
       </md-list>
  		</md-sidenav>
@@ -132,8 +132,12 @@ export default {
     }
   	.title{
   		flex: 8;
+      font-size: 18px;
   		text-align: left;
   	}
+    [data-dpr="2"] .title{
+      font-size: 56px;
+    }
   	.bottom-bar{
   		position: fixed;
   		bottom: 0;
@@ -144,6 +148,6 @@ export default {
       z-index: 2;
       bottom: 15%;
       right: 2%;
-    }	
+    }
   }
 </style>

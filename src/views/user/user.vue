@@ -4,7 +4,7 @@
       <md-layout class="header-left" md-flex="30">
         <md-avatar class="md-large avatar">
           <img src="../../assets/avatar.jpg" />
-        </md-avatar>        
+        </md-avatar>
       </md-layout>
       <md-layout md-flex="70" class="user-col" >
         <div class="nickname">Server</div>
@@ -33,7 +33,7 @@
           <md-button class="md-icon-button md-list-action">
             <md-icon>keyboard_arrow_right</md-icon>
           </md-button>
-        </md-list-item>        
+        </md-list-item>
         <md-list-item>
           <md-icon class="md-primary">get_app</md-icon>
           <div class="md-list-text-container">
@@ -42,8 +42,8 @@
           </div>
           <md-button class="md-icon-button md-list-action">
             <md-icon>keyboard_arrow_right</md-icon>
-          </md-button>          
-        </md-list-item>        
+          </md-button>
+        </md-list-item>
         <md-list-item>
           <md-icon class="md-primary">notifications</md-icon>
           <div class="md-list-text-container">
@@ -52,15 +52,15 @@
           </div>
           <md-button class="md-icon-button md-list-action">
             <md-icon>keyboard_arrow_right</md-icon>
-          </md-button>          
-        </md-list-item>        
-      </md-list>      
+          </md-button>
+        </md-list-item>
+      </md-list>
     </div>
   </div>
 </template>
 
 <script>
-  
+
 </script>
 
 <style lang='less' scoped>
@@ -91,7 +91,7 @@
         text-align: left;
         color: #666666;
         margin-left: 2px;
-      }      
+      }
     }
     .list{
       border-top: 1px solid #ededed;

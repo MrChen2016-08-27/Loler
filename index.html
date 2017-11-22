@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="flexible" content="initial-dpr=2" />
     <title>vue-pwa</title>
     <link rel="manifest" href="./static/manifest.json" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
@@ -12,7 +13,7 @@
           navigator.serviceWorker.register('./service-worker.js')
         }else{
           alert('浏览器暂不支持 Service Worker');
-        }  	
+        }
     </script>
   </head>
   <body>
