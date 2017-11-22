@@ -6,6 +6,7 @@ import router from './router'
 import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.css'
 import FastClick from 'fastclick'
+import Flexible from 'amfe-flexible'
 Vue.config.productionTip = false
 Vue.use(VueMaterial)
 Vue.material.registerTheme('default', {
@@ -18,6 +19,8 @@ new Vue({
   template: '<App/>',
   components: { App },
   mounted () {
+  	Flexible()
     FastClick.attach(document.body)
+
   }
 })
