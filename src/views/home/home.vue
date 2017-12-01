@@ -41,7 +41,7 @@
         </md-list-item>
         <md-list-item @click="setRouterAddress('/')">
             <md-icon>record_voice_over</md-icon>
-            <span>我的关注</span>
+            <span>商店</span>
         </md-list-item>
         <md-list-item>
           <md-icon>favorite</md-icon>
@@ -132,12 +132,8 @@ export default {
     }
   	.title{
   		flex: 8;
-      font-size: 18px;
   		text-align: left;
   	}
-    [data-dpr="2"] .title{
-      font-size: 56px;
-    }
   	.bottom-bar{
   		position: fixed;
   		bottom: 0;
